@@ -6,28 +6,19 @@
   "module": "dist/index.mjs",
   "types": "dist/index.d.ts",
   "files": ["dist"],
-
- "scripts": {
-  "dev": "vite",
-  "build": "tsup && vite build",
-  "preview": "vite preview"
-}
-
-  "keywords": [
-    "react",
-    "pagination",
-    "ui",
-    "component"
-  ],
-
+  "scripts": {
+    "build:js": "tsup",
+    "build:types": "tsc --declaration --emitDeclarationOnly --outDir dist",
+    "build": "npm run build:js && npm run build:types",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": ["react", "pagination", "ui", "component"],
   "author": "thami",
   "license": "MIT",
-
   "peerDependencies": {
     "react": ">=17",
     "react-dom": ">=17"
   },
-
   "devDependencies": {
     "typescript": "^5.0.0",
     "tsup": "^8.0.0",
