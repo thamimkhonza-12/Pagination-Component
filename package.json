@@ -1,0 +1,38 @@
+{
+  "name": "react-pagination-thami",
+  "version": "1.0.1",
+  "description": "Production-ready React pagination component",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "files": ["dist"],
+
+  "scripts": {
+    "build:js": "tsup",
+    "build:types": "tsc --declaration --emitDeclarationOnly --outDir dist",
+    "build": "npm run build:js && npm run build:types",
+    "prepublishOnly": "npm run build"
+  },
+
+  "keywords": [
+    "react",
+    "pagination",
+    "ui",
+    "component"
+  ],
+
+  "author": "thami",
+  "license": "MIT",
+
+  "peerDependencies": {
+    "react": ">=17",
+    "react-dom": ">=17"
+  },
+
+  "devDependencies": {
+    "typescript": "^5.0.0",
+    "tsup": "^8.0.0",
+    "@types/react": "^18.0.0",
+    "@types/react-dom": "^18.0.0"
+  }
+}
