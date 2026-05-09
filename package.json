@@ -7,12 +7,11 @@
   "types": "dist/index.d.ts",
   "files": ["dist"],
 
-  "scripts": {
-    "build:js": "tsup",
-    "build:types": "tsc --declaration --emitDeclarationOnly --outDir dist",
-    "build": "npm run build:js && npm run build:types",
-    "prepublishOnly": "npm run build"
-  },
+ "scripts": {
+  "dev": "vite",
+  "build": "tsup && vite build",
+  "preview": "vite preview"
+}
 
   "keywords": [
     "react",

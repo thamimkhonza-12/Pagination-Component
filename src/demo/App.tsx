@@ -6,10 +6,10 @@ export default function App() {
 
   return (
     <div style={{ padding: 40 }}>
-      <h1>Pagination Demo</h1>
+      <h2>Pagination Demo</h2>
 
       <Pagination
-        total={500}
+        total={100}
         pageSize={10}
         currentPage={page}
         onChange={setPage}
