@@ -6,12 +6,13 @@
   "module": "dist/index.mjs",
   "types": "dist/index.d.ts",
   "files": ["dist"],
+
   "scripts": {
-    "build:js": "tsup",
-    "build:types": "tsc --declaration --emitDeclarationOnly --outDir dist",
-    "build": "npm run build:js && npm run build:types",
-    "prepublishOnly": "npm run build"
-  },
+  "dev": "vite",
+  "build": "vite build",
+  "preview": "vite preview"
+}
+
   "keywords": ["react", "pagination", "ui", "component"],
   "author": "thami",
   "license": "MIT",
